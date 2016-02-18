@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/text_screen_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:background="@drawable/import_background"
+            android:weightSum="3">
+            <EditText
+                android:id="@+id/edittext_phone_num"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:background="@null"
+                android:hint="请输入手机号"
+                android:digits="1234567890."
+                android:singleLine="true"
+                android:paddingLeft="15dp"
+                android:drawablePadding="15dp"
+                android:layout_weight="2"/>
+            <Button
+                android:id="@+id/button_get_code"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:text="获取验证码"
+                android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/import_background"
+            >
+            <EditText
+                android:id="@+id/edittext_password"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:hint="请输入密码"
+                android:paddingLeft="15dp"
+                android:drawablePadding="15dp"
+                android:digits="1234567890."
+                android:singleLine="true"
+                android:background="@null"/>
+        </LinearLayout>
+        <Button
+            android:id="@+id/button_login"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:text="登陆"
+            />
+    </LinearLayout>
+
+</RelativeLayout>
